@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.version          = '6.0.3'
   s.summary          = 'FFmpeg Kit for Flutter'
   s.description      = 'A Flutter plugin for running FFmpeg and FFprobe commands.'
-  s.homepage         = 'https://github.com/Messagenius/ffmpeg_kit'
+  s.homepage         = 'https://github.com/Messagenius/ffmpeg-kit'
   s.license          = { :file => '../LICENSE' }
   s.author           = { 'ARTHENICA' => 'open-source@arthenica.com' }
   s.platform            = :ios
@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.source = { :path => '.' }
   s.source_files        = 'Classes/**/*'
   s.public_header_files = 'Classes/**/*.h'
-  s.dependency          'ffmpegkit', "6.0"
   s.dependency          'Flutter'
+  s.dependency          'ffmpegkit-ios', "6.0"
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
 end

@@ -60,7 +60,7 @@ If you're using CocoaPods, you'll need to modify the pod spec to point to your G
 ```ruby
 # In your podspec file
 s.source = { 
-  :http => "https://github.com/Messagenius/ffmpeg_kit/releases/download/v6.0/ffmpeg-kit-https-6.0-macos-xcframework.zip",
+  :http => "https://github.com/Messagenius/ffmpeg-kit/releases/download/v6.0/ffmpeg-kit-https-6.0-macos-xcframework.zip",
   :sha256 => "your-binary-sha256-checksum" 
 }
 ```
