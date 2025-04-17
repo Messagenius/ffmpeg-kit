@@ -6,13 +6,22 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/Messagenius/ffmpeg-kit'
   s.license          = { :file => '../LICENSE' }
   s.author           = { 'ARTHENICA' => 'open-source@arthenica.com' }
+
   s.platform            = :ios
   s.requires_arc        = true
   s.static_framework    = true
-  s.source = { :path => '.' }
+
+  s.source              = { :path => '.' }
   s.source_files        = 'Classes/**/*'
   s.public_header_files = 'Classes/**/*.h'
+
   s.dependency          'Flutter'
   s.dependency          'ffmpegkit-ios', "6.0"
-  s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
+  s.pod_target_xcconfig = { 
+    'DEFINES_MODULE' => 'YES', 
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+  }
+  s.user_target_xcconfig = { 
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+  }
 end
