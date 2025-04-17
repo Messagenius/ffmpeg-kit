@@ -1,2 +1,1 @@
-include ':ffmpeg-kit-android-lib'
-rootProject.name = 'ffmpeg-kit-android'
+rootProject.name = 'ffmpeg-kit-flutter-android'

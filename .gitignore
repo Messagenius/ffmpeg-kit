@@ -1,5 +1,6 @@
 /.tmp/
 /*.log
-/prebuilt/
+/prebuilt/android*/
+/prebuilt/apple*/
 .DS_Store
 .idea
