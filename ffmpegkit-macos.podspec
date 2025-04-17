@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.version          = '6.0'
   s.summary          = 'FFmpeg Kit macOS HTTPS Binary'
   s.description      = 'Custom FFmpeg binary with HTTPS support for macOS'
-  s.homepage         = 'https://github.com/Messagenius/ffmpeg_kit'
+  s.homepage         = 'https://github.com/Messagenius/ffmpeg-kit'
   s.license          = { :type => 'LGPL-3.0' }
   s.author           = { 'Messagenius' => 'info@example.com' }
   s.source           = { :path => '.' }
