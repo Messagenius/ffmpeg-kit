@@ -1,0 +1,46 @@
+// Add this to your app-level build.gradle file
+
+android {
+    // ... your existing configuration
+
+    // Required for FFmpeg Kit
+    packagingOptions {
+        pickFirst 'lib/x86/libc++_shared.so'
+        pickFirst 'lib/x86_64/libc++_shared.so'
+        pickFirst 'lib/armeabi-v7a/libc++_shared.so'
+        pickFirst 'lib/arm64-v8a/libc++_shared.so'
+    }
+}
+
+repositories {
+    // Option 1: Local AAR file
+    flatDir {
+        dirs 'libs'
+    }
+    
+    // Option 2: If using GitHub Packages
+    /*
+    maven {
+        name = "GitHubPackages"
+        url = uri("https://maven.pkg.github.com/YOUR_USERNAME/YOUR_REPO")
+        credentials {
+            username = project.findProperty("gpr.user") ?: System.getenv("GITHUB_USERNAME")
+            password = project.findProperty("gpr.key") ?: System.getenv("GITHUB_TOKEN")
+        }
+    }
+    */
+    
+    // Option 3: If using JitPack
+    // maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    // Option 1: Local AAR
+    implementation(name: 'ffmpeg-kit', ext: 'aar')
+    
+    // Option 2: GitHub Packages
+    // implementation 'com.yourdomain:ffmpeg-kit:1.0.0'
+    
+    // Option 3: JitPack
+    // implementation 'com.github.YOUR_USERNAME:YOUR_REPO:v1.0.0'
+} 

@@ -1,0 +1,23 @@
+FFmpeg Kit Custom Build Information
+===================================
+
+Build Date: $(date)
+FFmpeg Version: 6.0 (Included in ffmpeg-kit)
+Android NDK: 21.4.7075529
+
+Architectures:
+- arm-v7a
+- arm-v7a-neon
+- arm64-v8a
+- x86
+- x86-64
+
+External Libraries:
+- cpu_features
+
+Build Configuration:
+- API Level: 24
+- C++ STL: c++_shared
+
+This build was created using the ffmpeg-kit library from https://github.com/arthenica/ffmpeg-kit
+Custom modifications were made to fix license file issues and ensure proper building on Android. 
